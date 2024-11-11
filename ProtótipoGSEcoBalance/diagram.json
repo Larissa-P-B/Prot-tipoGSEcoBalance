@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "author": "Larissa b",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb2", "top": 256.2, "left": 108.4, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 38.4, "left": 561.64, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 3.2,
+      "left": -181.6,
+      "attrs": {}
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 94.7, "left": -144.2, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 397.55,
+      "left": 268.8,
+      "attrs": { "value": "10000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 351.6,
+      "left": 243.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 311.15,
+      "left": 345.6,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pot1:GND", "bb2:bn.1", "black", [ "v0" ] ],
+    [ "esp:GND.1", "bb2:bn.25", "black", [ "h-105.45", "v259.2" ] ],
+    [ "ldr1:GND", "bb2:bn.3", "black", [ "h0" ] ],
+    [ "ldr1:AO", "bb2:30t.a", "green", [ "h0" ] ],
+    [ "bb2:30t.b", "esp:34", "green", [ "v0", "h38.4", "v-192" ] ],
+    [ "ldr1:VCC", "bb2:tp.7", "red", [ "h0" ] ],
+    [ "bb2:tp.25", "esp:3V3", "red", [ "v0" ] ],
+    [ "pot1:SIG", "bb2:25t.c", "yellow", [ "v57.6", "h479.6" ] ],
+    [ "bb2:25t.e", "esp:35", "yellow", [ "v0", "h163.2", "v-220.8" ] ],
+    [ "pot1:VCC", "bb2:tp.13", "red", [ "v28.8", "h383.2" ] ],
+    [ "bb2:bn.11", "bb2:14b.j", "purple", [ "v0" ] ],
+    [ "bb2:21b.f", "esp:25", "purple", [ "v0" ] ],
+    [ "led1:A", "bb2:15b.h", "", [ "$bb" ] ],
+    [ "led1:C", "bb2:14b.h", "", [ "$bb" ] ],
+    [ "r1:1", "bb2:15b.i", "", [ "$bb" ] ],
+    [ "r1:2", "bb2:21b.i", "", [ "$bb" ] ],
+    [ "r2:1", "bb2:23t.b", "", [ "$bb" ] ],
+    [ "r2:2", "bb2:29t.b", "", [ "$bb" ] ],
+    [ "r2:1", "bb2:bn.19", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
