@@ -1,21 +1,34 @@
 # Protótipo GS EcoBalance
 
 ## Projeto IoT: Redução do Consumo Energético em Empresas
-**1. Introdução**
+### 1. Introdução
+
   Este projeto tem como objetivo monitorar a produção e o consumo de energia em sistemas de painéis solares, ajudando empresas a otimizar o consumo energético. Com o uso de um dispositivo ESP32, os dados de produção e consumo de energia são coletados em tempo real e enviados ao Thinger.io, onde podem ser analisados para identificar oportunidades de melhoria.
 --
-**2. Objetivos**
+### 2. Objetivos
 - Monitorar a produção de energia solar e o consumo elétrico.
 - Fornecer dados de consumo e produção em tempo real para visualização e análise.
 - Automatizar alertas visuais (LEDs) para indicar a relação entre produção e consumo.
 --  
-3. Componentes Utilizados
-ESP32: Microcontrolador para coleta e envio dos dados.
-LDR: Sensor de intensidade luminosa que simula a produção de energia solar.
-Potenciômetro: Simula o consumo energético da empresa.
-LED: Indica visualmente a suficiência ou insuficiência energética.
-4. Diagrama do Sistema
-Diagrama do circuito com ESP32, LDR, potenciômetro e LED, mostrando as conexões entre os pinos.
+### 3. Componentes Utilizados
+- ESP32: Microcontrolador para coleta e envio dos dados.
+  ![image](https://github.com/user-attachments/assets/6688c23a-34d2-4bec-acd3-3ebb2b2176ee)
+
+- LDR: Sensor de intensidade luminosa que simula a produção de energia solar.
+  ![image](https://github.com/user-attachments/assets/9cc879cf-8cf4-42c2-be86-655aadf10030)
+
+- Potenciômetro: Simula o consumo energético da empresa.
+- ![image](https://github.com/user-attachments/assets/d8d931ff-53e9-4149-ba77-20ce06ba0337)
+
+- LED: Indica visualmente a suficiência ou insuficiência energética.
+  ![image](https://github.com/user-attachments/assets/0be50a9e-d058-4383-8579-bcba5b18583f)
+
+--
+
+### 4. Diagrama do Sistema
+- Diagrama do circuito com ESP32, LDR, potenciômetro e LED, mostrando as conexões entre os pinos.
+  ![image](https://github.com/user-attachments/assets/faa97048-2435-4062-86ed-d6e87b9f38b0)
+
 
 5. Configurações
 Bibliotecas Utilizadas
