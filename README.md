@@ -137,7 +137,7 @@ void sendDataToThinger() {
   HTTPClient https;
   https.begin(client,url); 
   https.addHeader("Content-Type", "application/json");
-  https.addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEZXZpY2VDYWxsYmFja190ZXN0ZWdzIiwic3ZyIjoidXMtZWFzdC5hd3MudGhpbmdlci5pbyIsInVzciI6Imxhcmlzc2EifQ.j6nT0pFV-Z63mgxncXUCYayFrL55GEqL7i_QQucmF3k");
+  https.addHeader("Authorization", "Bearer ${Bearer}");
   https.addHeader("Accept", "application/json, text/plain, */*");
   
   
