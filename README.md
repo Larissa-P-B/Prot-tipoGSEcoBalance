@@ -55,8 +55,9 @@ Conexão Wi-Fi
 ```
 SSID: Wokwi-GUEST
 ```
-Thinger.io
+## Thinger.io
 URL: https://backend.thinger.io/v3/users/${user}/devices/${device_id}/callback/data
+
 Credenciais: Autenticação via Token (necessário substituir no código com o token fornecido).
 --
 6. Funcionamento do Código
