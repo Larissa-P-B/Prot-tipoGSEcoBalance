@@ -4,12 +4,12 @@
 ### 1. Introdução
 
   Este projeto tem como objetivo monitorar a produção e o consumo de energia em sistemas de painéis solares, ajudando empresas a otimizar o consumo energético. Com o uso de um dispositivo ESP32, os dados de produção e consumo de energia são coletados em tempo real e enviados ao Thinger.io, onde podem ser analisados para identificar oportunidades de melhoria.
---
+---
 ### 2. Objetivos
 - Monitorar a produção de energia solar e o consumo elétrico.
 - Fornecer dados de consumo e produção em tempo real para visualização e análise.
 - Automatizar alertas visuais (LEDs) para indicar a relação entre produção e consumo.
---  
+---  
 ### 3. Componentes Utilizados
 - ESP32: Microcontrolador para coleta e envio dos dados.
   <div align="left">
@@ -35,7 +35,7 @@
   </div>
 
 
---
+---
 
 ### 4. Diagrama do Sistema
 - Diagrama do circuito com ESP32, LDR, potenciômetro e LED, mostrando as conexões entre os pinos.
@@ -59,7 +59,7 @@ SSID: Wokwi-GUEST
 URL: https://backend.thinger.io/v3/users/${user}/devices/${device_id}/callback/data
 
 Credenciais: Autenticação via Token (necessário substituir no código com o token fornecido).
---
+---
 ### 6. Funcionamento do Código
 - Setup
 - Inicia a comunicação serial.
@@ -156,11 +156,11 @@ void sendDataToThinger() {
   https.end();
 }
 ```
---
+---
 
 ### 7. Resultados Esperados
 - Esse sistema permite que empresas visualizem seu perfil energético em tempo real, possibilitando ajustes no consumo e aprimorando a eficiência energética com base nos dados coletados.
---
+---
 
 ### 8. Próximos Passos
 - Implementar um dashboard no Thinger.io para visualização gráfica dos dados coletados.
@@ -168,7 +168,7 @@ void sendDataToThinger() {
   <img src="https://github.com/user-attachments/assets/5d24be83-123d-494f-8836-17c6183e9021" alt="Diagrama do Sistema" width="600"/>
 </div>
 
---
+---
 
 
 ### 9. Conclusão
