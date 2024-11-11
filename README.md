@@ -12,19 +12,28 @@
 --  
 ### 3. Componentes Utilizados
 - ESP32: Microcontrolador para coleta e envio dos dados.
-- <div align="left">
+  <div align="left">
   <img src="https://github.com/user-attachments/assets/6688c23a-34d2-4bec-acd3-3ebb2b2176ee" alt="Diagrama do Sistema" width="100"/>
   </div>
   
 
 - LDR: Sensor de intensidade luminosa que simula a produção de energia solar.
-  ![image](https://github.com/user-attachments/assets/9cc879cf-8cf4-42c2-be86-655aadf10030)
+  <div align="left">
+  <img src="https://github.com/user-attachments/assets/9cc879cf-8cf4-42c2-be86-655aadf10030" alt="Diagrama do Sistema" width="100"/>
+  </div>
+  
 
 - Potenciômetro: Simula o consumo energético da empresa.
-- ![image](https://github.com/user-attachments/assets/d8d931ff-53e9-4149-ba77-20ce06ba0337)
+   <div align="left">
+  <img src="https://github.com/user-attachments/assets/d8d931ff-53e9-4149-ba77-20ce06ba0337" alt="Diagrama do Sistema" width="100"/>
+  </div>
+
 
 - LED: Indica visualmente a suficiência ou insuficiência energética.
-  ![image](https://github.com/user-attachments/assets/0be50a9e-d058-4383-8579-bcba5b18583f)
+  <div align="left">
+  <img src="https://github.com/user-attachments/assets/0be50a9e-d058-4383-8579-bcba5b18583f" alt="Diagrama do Sistema" width="100"/>
+  </div>
+
 
 --
 
