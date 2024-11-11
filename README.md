@@ -33,7 +33,7 @@
   <div align="left">
   <img src="https://github.com/user-attachments/assets/0be50a9e-d058-4383-8579-bcba5b18583f" alt="Diagrama do Sistema" width="100"/>
   </div>
-  <div align="left">
+  <div align="center">
   <img src="https://github.com/user-attachments/assets/99522e59-c8b4-4859-964b-135b9cfad6d1" alt="Diagrama do Sistema" width="100"/>
   
   </div>
