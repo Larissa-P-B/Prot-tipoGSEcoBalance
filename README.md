@@ -44,7 +44,7 @@
   </div>
   
 
-5. Configurações
+### 5. Configurações
 Bibliotecas Utilizadas
 ```
 #include <WiFi.h>
@@ -60,7 +60,7 @@ URL: https://backend.thinger.io/v3/users/${user}/devices/${device_id}/callback/d
 
 Credenciais: Autenticação via Token (necessário substituir no código com o token fornecido).
 --
-6. Funcionamento do Código
+### 6. Funcionamento do Código
 - Setup
 - Inicia a comunicação serial.
 - Conecta ao Wi-Fi.
@@ -156,18 +156,20 @@ void sendDataToThinger() {
   https.end();
 }
 ```
+--
 
--- 
-7. Resultados Esperados
+### 7. Resultados Esperados
 - Esse sistema permite que empresas visualizem seu perfil energético em tempo real, possibilitando ajustes no consumo e aprimorando a eficiência energética com base nos dados coletados.
 --
-8. Próximos Passos
-Implementar um dashboard no Thinger.io para visualização gráfica dos dados coletados.
+
+### 8. Próximos Passos
+- Implementar um dashboard no Thinger.io para visualização gráfica dos dados coletados.
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5d24be83-123d-494f-8836-17c6183e9021" alt="Diagrama do Sistema" width="600"/>
 </div>
 
+--
 
 
-9. Conclusão
+### 9. Conclusão
 Esse projeto IoT oferece uma solução acessível para pequenas empresas que desejam monitorar e otimizar seu consumo energético de maneira eficiente e em tempo real.
