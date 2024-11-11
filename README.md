@@ -58,11 +58,12 @@ SSID: Wokwi-GUEST
 Thinger.io
 URL: https://backend.thinger.io/v3/users/larissa/devices/testegs/callback/data
 Credenciais: Autenticação via Token (necessário substituir no código com o token fornecido).
+--
 6. Funcionamento do Código
-Setup
-Inicia a comunicação serial.
-Conecta ao Wi-Fi.
-Configura os pinos de entrada e saída (LDR, Potenciômetro e LED).
+- Setup
+- Inicia a comunicação serial.
+- Conecta ao Wi-Fi.
+- Configura os pinos de entrada e saída (LDR, Potenciômetro e LED).
 ```
 // Credenciais do Wi-Fi
 const char* ssid = "Wokwi-GUEST"; 
@@ -92,12 +93,12 @@ void setup() {
 }
 ```
 
-Loop Principal
-Lê os valores do LDR (produção de energia) e do potenciômetro (consumo de energia).
-Exibe os valores no monitor serial.
-Compara os valores:
-LED Apagado: Quando a produção é maior que o consumo.
-LED Aceso: Quando o consumo é maior que a produção.
+- Loop Principal
+- Lê os valores do LDR (produção de energia) e do potenciômetro (consumo de energia).
+- Exibe os valores no monitor serial.
+- Compara os valores:
+- LED Apagado: Quando a produção é maior que o consumo.
+- LED Aceso: Quando o consumo é maior que a produção.
 ```
 void loop() {
   
@@ -124,7 +125,7 @@ void loop() {
    delay(1000); // Aguarda 1 segundo entre as leituras
 }
 ```
-Envia os dados coletados para o Thinger.io.
+- Envia os dados coletados para o Thinger.io.
 ```
 // Enviando dados ao servidor Thinger.IO
 void sendDataToThinger() {
