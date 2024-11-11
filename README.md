@@ -168,12 +168,17 @@ void sendDataToThinger() {
 
 ### 8. Próximos Passos
 - Implementar um dashboard no Thinger.io para visualização gráfica dos dados coletados.
+
+
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5d24be83-123d-494f-8836-17c6183e9021" alt="Diagrama do Sistema" width="600"/>
 </div>
 
----
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f8c3e1c6-581b-4c00-b073-2422664049cf" alt="Diagrama do Sistema" width="600"/>
+</div>
 
+---
 
 ### 9. Conclusão
 Esse projeto IoT oferece uma solução acessível para pequenas empresas que desejam monitorar e otimizar seu consumo energético de maneira eficiente e em tempo real.
