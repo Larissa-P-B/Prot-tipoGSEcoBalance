@@ -157,12 +157,17 @@ void sendDataToThinger() {
 }
 ```
 
-
+-- 
 7. Resultados Esperados
-Esse sistema permite que empresas visualizem seu perfil energético em tempo real, possibilitando ajustes no consumo e aprimorando a eficiência energética com base nos dados coletados.
-
+- Esse sistema permite que empresas visualizem seu perfil energético em tempo real, possibilitando ajustes no consumo e aprimorando a eficiência energética com base nos dados coletados.
+--
 8. Próximos Passos
 Implementar um dashboard no Thinger.io para visualização gráfica dos dados coletados.
-Expandir o sistema para monitoramento de múltiplas fontes de consumo e produção de energia.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/5d24be83-123d-494f-8836-17c6183e9021" alt="Diagrama do Sistema" width="600"/>
+</div>
+
+
+
 9. Conclusão
 Esse projeto IoT oferece uma solução acessível para pequenas empresas que desejam monitorar e otimizar seu consumo energético de maneira eficiente e em tempo real.
