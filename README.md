@@ -13,9 +13,9 @@
 ### 3. Componentes Utilizados
 - ESP32: Microcontrolador para coleta e envio dos dados.
 - <div align="center">
-  <img src="https://github.com/user-attachments/assets/6688c23a-34d2-4bec-acd3-3ebb2b2176ee" alt="Diagrama do Sistema" width="400"/>
-</div>
-  ![image](https://github.com/user-attachments/assets/6688c23a-34d2-4bec-acd3-3ebb2b2176ee)
+  <img src="https://github.com/user-attachments/assets/6688c23a-34d2-4bec-acd3-3ebb2b2176ee" alt="Diagrama do Sistema" width="100"/>
+  </div>
+  
 
 - LDR: Sensor de intensidade luminosa que simula a produção de energia solar.
   ![image](https://github.com/user-attachments/assets/9cc879cf-8cf4-42c2-be86-655aadf10030)
