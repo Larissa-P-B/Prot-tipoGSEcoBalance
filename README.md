@@ -39,20 +39,22 @@
 
 ### 4. Diagrama do Sistema
 - Diagrama do circuito com ESP32, LDR, potenciômetro e LED, mostrando as conexões entre os pinos.
-- <div align="center">
+  <div align="center">
   <img src="https://github.com/user-attachments/assets/faa97048-2435-4062-86ed-d6e87b9f38b0" alt="Diagrama do Sistema" width="600"/>
   </div>
   
 
 5. Configurações
 Bibliotecas Utilizadas
-cpp
-Copiar código
+```
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <WiFiClientSecure.h>
+```
 Conexão Wi-Fi
+```
 SSID: Wokwi-GUEST
+```
 Thinger.io
 URL: https://backend.thinger.io/v3/users/larissa/devices/testegs/callback/data
 Credenciais: Autenticação via Token (necessário substituir no código com o token fornecido).
@@ -61,21 +63,104 @@ Setup
 Inicia a comunicação serial.
 Conecta ao Wi-Fi.
 Configura os pinos de entrada e saída (LDR, Potenciômetro e LED).
+```
+// Credenciais do Wi-Fi
+const char* ssid = "Wokwi-GUEST"; 
+// URL do endpoint do Thinger.io (ajuste com seu dispositivo e chave)
+const char* thinger_device_id = "${device_id}";
+const char* thinger_device_key = "${device_key}";
+const String url = "https://backend.thinger.io/v3/users/larissa/devices/testegs/callback/data";
+
+// Configuração dos pinos:
+const int LDR_PIN = 34;       // Pino do LDR para produção de energia (ADC1)
+const int POT_PIN = 35;       // Pino do Potenciômetro para consumo de energia (ADC2)
+const int LED_PIN = 25;       // Pino do LED (simula relé)  
+
+void setup() {
+  // Inicia a comunicação serial
+  Serial.begin(115200);
+  
+  
+  connectToWiFi();
+  // Exibe o IP após a conexão
+  Serial.print("Endereço IP: ");
+  Serial.println(WiFi.localIP());
+ // Configuração dos pinos de I/Os digitais:
+  
+  // Saída ---> LED   
+  pinMode(LED_PIN, OUTPUT);
+}
+```
+
 Loop Principal
 Lê os valores do LDR (produção de energia) e do potenciômetro (consumo de energia).
 Exibe os valores no monitor serial.
 Compara os valores:
 LED Apagado: Quando a produção é maior que o consumo.
 LED Aceso: Quando o consumo é maior que a produção.
-Envia os dados coletados para o Thinger.io.
-7. Código-Fonte
-Inclua o código completo do projeto, com comentários explicativos sobre cada seção para facilitar a compreensão.
+```
+void loop() {
+  
 
-8. Resultados Esperados
+  int ldrValue = analogRead(LDR_PIN);  // Leitura do valor do LDR
+  int potValue = analogRead(POT_PIN);  // Leitura do valor do Potenciômetro
+  
+   Serial.print("Produção de Energia (LDR): ");
+   Serial.println(ldrValue);   // Exibe o valor de produção
+  
+   Serial.print("Consumo de Energia (Potenciômetro): ");
+   Serial.println(potValue);   // Exibe o valor de consumo
+  
+   // Lógica para ligar/desligar o LED com base nos valores lidos
+
+  if (ldrValue > potValue) {
+     digitalWrite(LED_PIN, LOW);  // Desliga o LED (suficiência de energia)
+   } else {
+     digitalWrite(LED_PIN, HIGH);   //  Liga o LED (insuficiência de energia)
+   }
+
+   sendDataToThinger();
+  
+   delay(1000); // Aguarda 1 segundo entre as leituras
+}
+```
+Envia os dados coletados para o Thinger.io.
+```
+// Enviando dados ao servidor Thinger.IO
+void sendDataToThinger() {
+  WiFiClientSecure client;
+  client.setInsecure();  // Desabilita a verificação SSL temporariamente para testes
+  int ldrValue = analogRead(LDR_PIN);  // Leitura do valor do LDR
+  int potValue = analogRead(POT_PIN); //Leitura do valor
+
+  HTTPClient https;
+  https.begin(client,url); 
+  https.addHeader("Content-Type", "application/json");
+  https.addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEZXZpY2VDYWxsYmFja190ZXN0ZWdzIiwic3ZyIjoidXMtZWFzdC5hd3MudGhpbmdlci5pbyIsInVzciI6Imxhcmlzc2EifQ.j6nT0pFV-Z63mgxncXUCYayFrL55GEqL7i_QQucmF3k");
+  https.addHeader("Accept", "application/json, text/plain, */*");
+  
+  
+  String payload = "{\"Produção de Energia (LDR)\": " + String(ldrValue) + ", \"Consumo de Energia (Potenciômetro)\": " + String(potValue) + "}";
+  int httpResponseCode = https.POST(payload);
+  
+  //Logica para capturar resposta do servidor
+  if (httpResponseCode > 0) {
+    String response = https.getString();
+    Serial.println("Resposta do servidor: " + String(httpResponseCode));
+  } else {
+    Serial.println("Erro na requisição: " + String(httpResponseCode));
+  }
+
+  https.end();
+}
+```
+
+
+7. Resultados Esperados
 Esse sistema permite que empresas visualizem seu perfil energético em tempo real, possibilitando ajustes no consumo e aprimorando a eficiência energética com base nos dados coletados.
 
-9. Próximos Passos
+8. Próximos Passos
 Implementar um dashboard no Thinger.io para visualização gráfica dos dados coletados.
 Expandir o sistema para monitoramento de múltiplas fontes de consumo e produção de energia.
-10. Conclusão
+9. Conclusão
 Esse projeto IoT oferece uma solução acessível para pequenas empresas que desejam monitorar e otimizar seu consumo energético de maneira eficiente e em tempo real.
