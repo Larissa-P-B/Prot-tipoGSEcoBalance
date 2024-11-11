@@ -56,7 +56,7 @@ Conexão Wi-Fi
 SSID: Wokwi-GUEST
 ```
 Thinger.io
-URL: https://backend.thinger.io/v3/users/larissa/devices/testegs/callback/data
+URL: https://backend.thinger.io/v3/users/${user}/devices/${device_id}/callback/data
 Credenciais: Autenticação via Token (necessário substituir no código com o token fornecido).
 --
 6. Funcionamento do Código
@@ -70,7 +70,7 @@ const char* ssid = "Wokwi-GUEST";
 // URL do endpoint do Thinger.io (ajuste com seu dispositivo e chave)
 const char* thinger_device_id = "${device_id}";
 const char* thinger_device_key = "${device_key}";
-const String url = "https://backend.thinger.io/v3/users/larissa/devices/testegs/callback/data";
+const String url = "https://backend.thinger.io/v3/users/${user}/devices/${device_id}/callback/data";
 
 // Configuração dos pinos:
 const int LDR_PIN = 34;       // Pino do LDR para produção de energia (ADC1)
