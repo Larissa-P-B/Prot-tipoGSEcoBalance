@@ -12,7 +12,7 @@
 --  
 ### 3. Componentes Utilizados
 - ESP32: Microcontrolador para coleta e envio dos dados.
-- <div align="center">
+- <div align="left">
   <img src="https://github.com/user-attachments/assets/6688c23a-34d2-4bec-acd3-3ebb2b2176ee" alt="Diagrama do Sistema" width="100"/>
   </div>
   
