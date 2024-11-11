@@ -43,9 +43,10 @@
 - Diagrama do circuito com ESP32, LDR, potenciômetro e LED, mostrando as conexões entre os pinos.
   <div align="center">
 
-  <img src="https://github.com/user-attachments/assets/99522e59-c8b4-4859-964b-135b9cfad6d1" alt="Diagrama do Sistema" width="600"/>
+  <img src="https://github.com/user-attachments/assets/05b15b7e-979a-48de-af7e-bfe0d58e092f" alt="Diagrama do Sistema" width="600"/>
   </div>
   
+
 
 ### 5. Configurações
 Bibliotecas Utilizadas
