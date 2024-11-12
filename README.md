@@ -1,6 +1,6 @@
 # Protótipo GS EcoBalance
 
-## Projeto IoT: Redução do Consumo Energético em Empresas
+## Projeto IoT: Monitoramento do Consumo e Produção Energético em Empresas
 ### 1. Introdução
 
   Este projeto tem como objetivo monitorar a produção e o consumo de energia em sistemas de painéis solares, ajudando empresas a otimizar o consumo energético. Com o uso de um dispositivo ESP32, os dados de produção e consumo de energia são coletados em tempo real e enviados ao Thinger.io, onde podem ser analisados para identificar oportunidades de melhoria.
